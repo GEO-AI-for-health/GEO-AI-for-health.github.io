@@ -1,1 +1,1 @@
-# GEO-AI-for-health-test.github.io
+# GEO-AI-for-health.github.io
