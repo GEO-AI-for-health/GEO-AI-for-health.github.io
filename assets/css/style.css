@@ -165,6 +165,26 @@ main { overflow: hidden; }
   box-shadow: var(--shadow);
 }
 .card-number { color: var(--orange); font-size: .75rem; font-weight: 800; letter-spacing: .12em; }
+.research-icon {
+  width: 52px;
+  height: 52px;
+  margin-bottom: 1.25rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid #bcd8d5;
+  border-radius: 15px;
+  color: var(--teal);
+  background: linear-gradient(145deg, #f4fbfa, #e5f5f2);
+}
+.research-icon svg {
+  width: 30px;
+  height: 30px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 .card h3 { color: var(--navy); font-family: Georgia, serif; font-size: 1.45rem; }
 .feature-section { width: min(1120px, calc(100% - 2rem)); }
 .feature-list { display: grid; gap: 1rem; }
@@ -219,6 +239,29 @@ main { overflow: hidden; }
 .project-card.featured h2 { max-width: 780px; color: var(--white); font-size: 2.1rem; }
 .project-card.featured p { max-width: 850px; color: rgba(255,255,255,.78); }
 .project-meta { color: var(--orange); font-size: .75rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.project-role {
+  display: inline-block;
+  margin-bottom: .75rem;
+  padding: .25rem .65rem;
+  border: 1px solid #bcd8d5;
+  border-radius: 999px;
+  color: #00665f;
+  background: #edf8f6;
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.project-card.featured .project-role {
+  color: #b9f2ec;
+  border-color: rgba(185,242,236,.35);
+  background: rgba(0,0,0,.12);
+}
+.project-role-pi {
+  color: #8b3a16;
+  border-color: #f1c2a8;
+  background: #fff0e7;
+}
 
 .site-footer { color: rgba(255,255,255,.72); background: var(--navy-deep); padding: 3rem 1rem 2rem; }
 .footer-inner { width: min(1120px, 100%); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
