@@ -166,25 +166,47 @@ main { overflow: hidden; }
 }
 .card-number { color: var(--orange); font-size: .75rem; font-weight: 800; letter-spacing: .12em; }
 .research-icon {
-  width: 52px;
-  height: 52px;
-  margin-bottom: 1.25rem;
+  width: 76px;
+  height: 76px;
+  margin-bottom: 1.4rem;
   display: grid;
   place-items: center;
-  border: 1px solid #bcd8d5;
-  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(0,127,123,.24);
+  border-radius: 22px;
   color: var(--teal);
-  background: linear-gradient(145deg, #f4fbfa, #e5f5f2);
+  background:
+    radial-gradient(circle at 75% 20%, rgba(231,120,60,.19), transparent 28%),
+    linear-gradient(145deg, #f8fcfb, #dcefeb);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.9),
+    0 14px 28px rgba(0,127,123,.13);
 }
+.research-icon::after {
+  content: "";
+  position: absolute;
+  width: 36px;
+  height: 80px;
+  top: -20px;
+  left: -45px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.7), transparent);
+  transform: rotate(25deg);
+  transition: left .55s ease;
+}
+.card:hover .research-icon::after { left: 95px; }
 .research-icon svg {
-  width: 30px;
-  height: 30px;
+  width: 52px;
+  height: 52px;
   fill: none;
-  stroke: currentColor;
-  stroke-width: 1.8;
+  stroke-width: 1.65;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
+.research-icon .icon-grid { stroke: rgba(0,127,123,.19); }
+.research-icon .icon-main { stroke: #075c69; }
+.research-icon .icon-node { stroke: #007f7b; fill: #e9f8f5; }
+.research-icon .icon-hot { stroke: var(--orange); fill: #fff3eb; }
 .card h3 { color: var(--navy); font-family: Georgia, serif; font-size: 1.45rem; }
 .feature-section { width: min(1120px, calc(100% - 2rem)); }
 .feature-list { display: grid; gap: 1rem; }
